@@ -10,7 +10,7 @@
 **Inspiration:** Nier Automata, Nier Replicant.
 <br>
 <br>
-**Palettet de couleur:** [coolors.co](https://coolors.co/46433c-afaa96-c2bca4-d2ccb4)
+**Palette de couleur:** [coolors.co](https://coolors.co/46433c-afaa96-c2bca4-d2ccb4)
 <br>
 <br>
 
