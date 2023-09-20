@@ -9,7 +9,7 @@
                         <mxPoint x="510" y="-760" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="8" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Activation de l'android 1N (Unité 1 Type N(ier) )&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="8" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Activation de l'android 1N (Unité 1 Type N(ier) )&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="420" y="-870" width="180" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="97" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="16" target="17" edge="1">
@@ -20,31 +20,31 @@
                         <mxPoint x="177.5" y="541.25" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="16" value="Pod ne peut pas&lt;br&gt;sauver deux androids" style="rhombus;whiteSpace=wrap;html=1;rounded=1;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" parent="1" vertex="1">
+                <mxCell id="16" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Pod ne peut pas&lt;br&gt;sauver deux androids&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=1;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" parent="1" vertex="1">
                     <mxGeometry x="97.5" y="301.25" width="160" height="160" as="geometry"/>
                 </mxCell>
                 <mxCell id="100" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="17" target="8" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="17" value="Votre data est perdu (mort)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+                <mxCell id="17" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Votre data est perdu (mort)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
                     <mxGeometry x="-170" y="347.5" width="150" height="67.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="21" value="Se rendre au parc d'attraction en ruine" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+                <mxCell id="21" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Se rendre au parc d'attraction en ruine&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
                     <mxGeometry x="520" y="-630" width="120" height="35" as="geometry"/>
                 </mxCell>
-                <mxCell id="31" value="Attaquer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+                <mxCell id="31" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Attaquer&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
                     <mxGeometry x="360" y="-545" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="35" value="Ne pas chercher les androids" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+                <mxCell id="35" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Ne pas chercher les androids&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
                     <mxGeometry x="280" y="-211.25" width="155" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="36" value="Aller à la recherche des androids." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
+                <mxCell id="36" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Aller à la recherche des androids.&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;" parent="1" vertex="1">
                     <mxGeometry x="520" y="-80" width="155" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="47" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;" parent="1" source="45" target="8" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="45" value="Rencontre avec un android déserté. Mort" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+                <mxCell id="45" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Rencontre avec un android déserté. Mort&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
                     <mxGeometry x="100" y="-211.25" width="165" height="82.5" as="geometry"/>
                 </mxCell>
                 <mxCell id="73" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="32" target="81" edge="1">
@@ -55,37 +55,37 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="32" value="Vous avez éliminé les robots&lt;br&gt;(mais ils alertent les autres robots plus loin)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" parent="1" vertex="1">
+                <mxCell id="32" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Vous avez éliminé les robots&lt;br&gt;(mais ils alertent les autres robots plus loin)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" parent="1" vertex="1">
                     <mxGeometry x="170" y="-552.5" width="170" height="85" as="geometry"/>
                 </mxCell>
                 <mxCell id="90" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#e01f1f;" parent="1" source="48" target="77" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="48" value="Arrivée au théâtre&lt;br&gt;du parc d'attraction&lt;br&gt;(château)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
+                <mxCell id="48" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Arrivée au théâtre&lt;br&gt;du parc d'attraction&lt;br&gt;(château)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
                     <mxGeometry x="427.5" y="-30" width="165" height="82.5" as="geometry"/>
                 </mxCell>
                 <mxCell id="96" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="53" target="16" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="53" value="Bataille contre Simone, mais&lt;br&gt;les robots contrôlés par Simone sont trop nombreux." style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" parent="1" vertex="1">
+                <mxCell id="53" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Bataille contre Simone, mais&lt;br&gt;les robots contrôlés par Simone sont trop nombreux.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#f0a30a;fontColor=#000000;strokeColor=#BD7000;" parent="1" vertex="1">
                     <mxGeometry x="95" y="148.75" width="165" height="82.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="54" value="Si a tué les robots" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="54" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Si a tué les robots&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="295" y="151.25" width="130" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="55" value="Attaque frontale" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="55" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Attaque frontale&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="590" y="150" width="130" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="57" value="Sauver le data de 2S" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="57" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Sauver le data de 2S&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry y="331.25" width="105" height="46.25" as="geometry"/>
                 </mxCell>
-                <mxCell id="58" value="Sauver soi-même (1N)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="58" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Sauver soi-même (1N)&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="180" y="481.25" width="150" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="62" value="Vous et 2S réussissez à combattre Simone.&lt;br&gt;(Fin)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+                <mxCell id="62" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Vous et 2S réussissez à combattre Simone.&lt;br&gt;(Fin)&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
                     <mxGeometry x="427.5" y="410" width="165" height="82.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="60" value="Analyser les robots" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="60" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Analyser les robots&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="530" y="-425" width="70" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="91" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="77" target="62" edge="1">
@@ -97,13 +97,13 @@
                 <mxCell id="102" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="77" target="53" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="77" value="Rencontre avec&lt;br&gt;Simone, ennemie de&lt;br&gt;classe: Goliath" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+                <mxCell id="77" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Rencontre avec&lt;br&gt;Simone, ennemie de&lt;br&gt;classe: Goliath&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="430" y="110" width="160" height="160" as="geometry"/>
                 </mxCell>
                 <mxCell id="86" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontColor=#e01f1f;" parent="1" source="78" target="79" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="78" value="&lt;div style=&quot;line-height: 12.1px; font-size: 11px;&quot;&gt;Rencontre avec android 2S,&lt;/div&gt;&lt;div style=&quot;line-height: 12.1px; font-size: 11px;&quot;&gt;début de la mission&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="78" value="&lt;div style=&quot;line-height: 12.1px; font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Rencontre avec android 2S,&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;line-height: 12.1px; font-size: 14px;&quot;&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;début de la mission&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="425" y="-730" width="170" height="85" as="geometry"/>
                 </mxCell>
                 <mxCell id="87" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#e01f1f;" parent="1" source="79" target="81" edge="1">
@@ -112,7 +112,7 @@
                 <mxCell id="88" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontColor=#e01f1f;" parent="1" source="79" target="32" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="79" value="&lt;div style=&quot;text-align: center; line-height: 110%; font-size: 11px;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Robots pacifistes,&lt;/span&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Tuer les robots ou les analyser ?&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;align=right;rounded=1;" parent="1" vertex="1">
+                <mxCell id="79" value="&lt;div style=&quot;text-align: center; line-height: 110%; font-size: 14px;&quot;&gt;&lt;span style=&quot;&quot;&gt;Robots pacifistes,&lt;/span&gt;&lt;br style=&quot;&quot;&gt;&lt;span style=&quot;&quot;&gt;Tuer les robots ou les analyser ?&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;align=right;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="430" y="-595" width="160" height="170" as="geometry"/>
                 </mxCell>
                 <mxCell id="84" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontColor=#e01f1f;" parent="1" source="80" target="48" edge="1">
@@ -121,25 +121,25 @@
                 <mxCell id="89" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontColor=#e01f1f;" parent="1" source="80" target="45" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="80" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;Les &lt;i&gt;Blackbox&lt;/i&gt; (coeurs) d'androids disparus&lt;br&gt;ont été détectés&lt;br&gt;&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+                <mxCell id="80" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Les &lt;i&gt;Blackbox&lt;br&gt;&lt;/i&gt;(coeurs) d'androids disparus&lt;br&gt;ont été détectés&lt;br&gt;&lt;/font&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
                     <mxGeometry x="430" y="-250" width="160" height="160" as="geometry"/>
                 </mxCell>
                 <mxCell id="83" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontColor=#e01f1f;" parent="1" source="81" target="80" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="81" value="Se fraie un chemin dans le parc d'attraction." style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
+                <mxCell id="81" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Se fraie un chemin dans le parc d'attraction.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;" parent="1" vertex="1">
                     <mxGeometry x="427.5" y="-380" width="165" height="82.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="92" value="Attaque furtive" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                <mxCell id="92" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Attaque furtive&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="520" y="305" width="90" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="101" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="93" target="8" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="93" value="Tué par les androids disparus&lt;br&gt;et contrôlés par Simone." style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
+                <mxCell id="93" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Tué par les androids disparus&lt;br&gt;et contrôlés par Simone.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#e51400;fontColor=#ffffff;strokeColor=#B20000;" parent="1" vertex="1">
                     <mxGeometry x="735" y="150" width="165" height="82.5" as="geometry"/>
                 </mxCell>
-                <mxCell id="99" value="Vous emmenez Simone dans votre mort. Votre Data a été sauvegardé, vous pouvez renaître" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+                <mxCell id="99" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Vous emmenez Simone dans votre mort. Votre Data a été sauvegardé, vous pouvez renaître&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
                     <mxGeometry x="95" y="551.25" width="165" height="82.5" as="geometry"/>
                 </mxCell>
             </root>
