@@ -1,7 +1,7 @@
 chapters = {
     debut :{
-        titre: '',
-        description:'',
+        titre: 'test 1',
+        description:' texte 1',
         image: '',
         bouton: [
             {titre: 'Continuer','destination': 'activation',}
@@ -9,8 +9,8 @@ chapters = {
     },
 
     activation: {
-        titre: '',
-        description:'',
+        titre: 'test 2',
+        description:'text 2',
         image: '',
         bouton: [
             {titre: 'Attaquer les robots','destination': 'robot',},
