@@ -7,8 +7,8 @@ simoneDesti = simoneDestiInit;
 chapters = {
     debut :{
         titre: `Gloire à l’humanité`,
-        description:`Il y a plusieurs années auparavant, les extraterrestres ont mis fin à la grande ère de l’humanité. Peu après leur arrivée sur Terre, ils ont lâché leur plus grande arme, des robots. Les humains n’ont trouvé comme solution que d’aller se réfugier sur la lune. Une dizaine d’années plus tard, YoRha fut créé afin de repousser l’ennemi et aider l’humanité à reprendre leur planète. Malheureusement, cela fait bien longtemps que nous nous battons. 
-        \nC’est pour cette raison que vous, soldat, avez pour mission de vous battre en l’honneur de l’humanité. Afin de reprendre ce qu’appartient à nos créateurs. Nous avons confiance en vous. `,
+        description:`Il y a de nombreuses années, une menace extraterrestre a brisé l’âge d’or de l’humanité en déployant une redoutable armada de robots. Face à cette catastrophe, les survivants ont pris refuge sur la lune. Une décennie s’est écoulée depuis lors, et c’est à ce moment que l’organisation YoRha a vu le jour.
+        \nLa guerre n’a pourtant cessé de continuer jusqu’à ce jour. C’est pour cette raison que vous, soldat, avez pour mission de vous battre en l’honneur de l’humanité afin de reprendre la planète natale de nos créateurs. Nous avons confiance en vous. Gloire... À l’humanité.`,
         image: ``,
         bouton: [
             {titre: 'Continuer','destination': 'activation',}
@@ -16,8 +16,10 @@ chapters = {
     },
 
     activation: {
-        titre: `test2`,
-        description:`texte2`,
+        titre: `Activation`,
+        description:`Activation de l'androïde Unité 1 type Nier. Bonjour, 1N, je suis Pod A, votre assistant. Je vous accompagnerai à chacune des étapes de votre mission. L'androïde 2S, Unité 2 Type Scanner, s’est également joint à votre mission et a déjà identifié un ennemi au parc d’attractions. La mission débute maintenant.
+        \nMais avant, rappelez-vous : Gloire... à l’humanité.
+        \nAlerte ! Lorsque vous arrivés à l’entrée du parc d’attractions, des robots semblent adopter un comportement pacifique. Analyse des possibilités...`,
         image: ``,
         bouton: [
             {titre: 'Attaquer les robots','destination': 'robot',},
@@ -26,8 +28,10 @@ chapters = {
     },
 
     robot: {
-        titre: ``,
-        description:``,
+        titre: `Attaquer les robots`,
+        description:`Vous attaquez les robots, ils n’attaquent pas en retour. 2S a piraté l’un d’eux, il semble émettre un message... Lecture du message.
+        \n..-…--..---..-..-.---..-
+        \nC'est étrange. Je n’arrive pas à traduire ce code. Veuillez continuer votre mission.`,
         image: ``,
         bouton: [
             {titre: 'Continuer son chemin','destination': 'blackbox',}
@@ -35,7 +39,7 @@ chapters = {
     },
 
     blackbox:{
-        titre: ``,
+        titre: `Les Blackbox`,
         description:``,
         image: ``,
         bouton: [
@@ -116,6 +120,7 @@ function goToChapter(chapter){
                 chapters.simone.bouton[1].destination = simoneDestiRobot;
             }
 
+            //
 
             console.log(chapters[chapter].titre);
             console.log(chapters[chapter].description);
@@ -133,3 +138,4 @@ function goToChapter(chapter){
 }
 
 goToChapter('debut');
+
