@@ -11,7 +11,7 @@ chapters = {
     debut :{
         titre: `Gloire à l’humanité`,
         description:`Message entrant: .--.-.-
-        \nIl y a de nombreuses années, une menace extraterrestre a brisé l’âge d’or de l’humanité en déployant une redoutable armada de robots. Face à cette catastrophe, les survivants ont pris refuge sur la lune. Une décennie s’est écoulée depuis, et c’est à ce moment que l’organisation YoRha a vu le jour.
+        \nIl y a de nombreuses années, une menace extraterrestre a brisé l’âge d’or de l’humanité en déployant une redoutable armada de robots. Face à cette catastrophe, les survivants ont pris refuge sur la lune. Des siècles se sont écoulés depuis, et c’est à ce moment que l’organisation YoRha a vu le jour.
         \nLa guerre n’a pourtant cessé de continuer jusqu’à ce jour. C’est pour cette raison que vous, soldat, avez pour mission de vous battre en l’honneur de l’humanité afin de reprendre la planète natale de nos créateurs. Nous avons confiance en vous. Gloire... À l’humanité.`,
         image: ``,
         bouton: [
@@ -45,7 +45,7 @@ chapters = {
     blackbox:{
         titre: `Les Blackbox`,
         description:`Vous avancez plus loin. 2S scanne les environs. Elle semble détecter les blackbox d’autres androïdes récemment disparus.
-        \nPermission de vous rappeler ce qu’est une blackbox, 1N. La blackbox constitue le noyau essentiel d’un androïde. Ce noyau permet l'exécution de multiples fonctions, telles que, dans ce cas précis, celle d’un traqueur. En cas d’Extrême urgence, vous pouvez utiliser votre blackbox comme arme nucléaire.`,
+        \nPermission de vous rappeler ce qu’est une blackbox, 1N. La blackbox constitue le noyau essentiel d’un androïde. Ce noyau permet l'exécution de multiples fonctions, telles que, dans ce cas précis, celle d’un traqueur. En cas d’extrême urgence, vous pouvez utiliser votre blackbox comme arme nucléaire.`,
         image: ``,
         bouton: [
             {titre: 'Retrouver les blackbox','destination': 'simone',},
@@ -54,7 +54,7 @@ chapters = {
 
     verite:{
         titre: `La vérité`,
-        description:`Vous explorez le parc à la recherche de l’ennemi, mais vous rencontrez 1B, un androïde désertée très dangereuse. Sans avoir le temps de réagir, 1B vous attaque, vous laissant comme dernière mémoire, une vérité choquante...
+        description:`Vous explorez le parc à la recherche de l’ennemi, mais vous rencontrez 1B, une androïde désertée très dangereuse. Sans avoir le temps de réagir, 1B vous attaque, vous laissant comme dernière mémoire, une vérité choquante...
         \n..--.-.-.--YoRha... Vous utilise... Vos combats éternels ne mènent à rien... L’humanité a complètement disparue depuis des siècles...--.--..---
         \nVous mourrez...
         \nDonnées envoyées à la base. Vous pouvez recommencer. `,
@@ -134,20 +134,21 @@ function goToChapter(chapter){
                 chapters.simone.bouton[1].destination = simoneDestiRobot;
             }
 
-            //
+            else if(chapter == 'debut'){
+                chapters.simone.bouton[1].destination = simoneDestiInit;
+            }
 
             console.log(chapters[chapter].titre);
             console.log(chapters[chapter].description);
             console.log("Options:")
 
             chapters[chapter].bouton.forEach( function (bout){
-                console.log(`${bout.titre} \ntapez: goToChapter(\'${bout.destination}\')`  );
+                console.log(`${bout.titre} \nTapez: goToChapter(\'${bout.destination}\')`  );
             });
         }
         
         else{
             console.log(`Attention! C'est la mauvaise clé. Veuillez revoir l'appelation plus haut.`);
-            //s'assurer sans '' non plus !
         }
         return 'Pod A attend votre décision...-..-.-..-';
 }
