@@ -1,6 +1,19 @@
 //NOTE SUR LE TEXTE: Puisque le narrateur est un robot accompagnateur (Pod), à certains endroit le texte est FAIT EXPRÈS pour être inlisible, comme un glitch, une erreur, etc.
 //C'est parties ne sont pas des erreurs dans le code.
 
+
+
+//Variables html
+
+let titreChapter = document.querySelector('h2');
+let imageChapter = document.querySelector('.situation');
+let texteChapter = document.querySelector('p');
+let boutonChapter = document.querySelector('button');
+
+
+
+//variables chapitre secret
+
 const simoneDestiInit= 'danse';
 const simoneDestiRobot = 'choix';
 
@@ -140,6 +153,13 @@ function goToChapter(chapter){
 
             //If au dessus est pour le chapitre secret (plot twist). Si on prend le chemin des robots alors le bouton va changer pour la direction du chapitre secret.
             //Else if est pour réinitialiser les boutons au choix initial quand on retourne au début, sans à avoir recharger la page.
+
+            titreChapter.innerText = chapters[chapter].titre;
+            texteChapter.innerText = chapters[chapter].description;
+            imageChapter.src = chapters[chapter].image;
+            
+            
+
 
             console.log(chapters[chapter].titre);
             console.log(chapters[chapter].description);
