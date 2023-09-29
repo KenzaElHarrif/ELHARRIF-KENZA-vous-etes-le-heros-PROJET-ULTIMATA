@@ -157,7 +157,7 @@ function goToChapter(chapter){
             titreChapter.innerText = chapters[chapter].titre;
             texteChapter.innerText = chapters[chapter].description;
             imageChapter.src = chapters[chapter].image;
-            
+
             
 
 
@@ -166,6 +166,8 @@ function goToChapter(chapter){
             console.log("Options:")
 
             chapters[chapter].bouton.forEach( function (bout){
+
+                boutonChapter.innerHTML = `${bout.titre}`;
                 console.log(`${bout.titre} \nTapez: goToChapter(\'${bout.destination}\')`  );
             });
         }
@@ -175,6 +177,8 @@ function goToChapter(chapter){
         }
         return 'Pod A attend votre décision...-..-.-..-';
 }
+
+
 
 goToChapter('debut');
 
