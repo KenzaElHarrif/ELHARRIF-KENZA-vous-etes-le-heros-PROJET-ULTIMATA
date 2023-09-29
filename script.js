@@ -23,7 +23,7 @@ simoneDesti = simoneDestiInit;
 chapters = {
     debut :{
         titre: `Gloire à l’humanité`,
-        description:`Message entrant: .--.-.-
+        description:`Message entrant: ........
         \nIl y a de nombreuses années, une menace extraterrestre a brisé l’âge d’or de l’humanité en déployant une redoutable armada de robots. Face à cette catastrophe, les survivants ont pris refuge sur la lune. Des siècles se sont écoulés depuis, et c’est à ce moment que l’organisation YoRha a vu le jour.
         \nLa guerre n’a pourtant cessé de continuer jusqu’à ce jour. C’est pour cette raison que vous, soldat, avez pour mission de vous battre en l’honneur de l’humanité afin de reprendre la planète natale de nos créateurs. Nous avons confiance en vous. Gloire... À l’humanité.`,
         image: `./assets/images/gloire-a-humanite.png`,
@@ -141,6 +141,8 @@ chapters = {
 
 }
 
+
+
 function goToChapter(chapter){
         if(chapters[chapter]){
             if(chapter == 'robot'){
@@ -178,7 +180,7 @@ function goToChapter(chapter){
         return 'Pod A attend votre décision...-..-.-..-';
 }
 
-
-
 goToChapter('debut');
+
+
 
