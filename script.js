@@ -9,6 +9,9 @@ let titreChapter = document.querySelector('h2');
 let imageChapter = document.querySelector('.situation');
 let texteChapter = document.querySelector('p');
 let boutonChapter = document.querySelector('button');
+let div = document.querySelector('.button');
+
+
 
 
 
@@ -123,7 +126,7 @@ chapters = {
     scanner:{
         titre: `Unité 2 Type Scanner`,
         description:`Simone n’a pas été combattu, mais les données de 2S ont été sauvegardés et renvoyés à la base. Votre mort a laissé 2S troublé. Pour une raison inconnue de tous, 2S a déserté YoRha quelques mois après votre mort. Aujourd’hui, j’accompagne 2S partout, elle se bat maintenant en votre mémoire... `,
-        image: `./assets/images/2b-jungle.jpg`,
+        image: `./assets/images/2b_jungle.jpg`,
         bouton: [
             {titre: 'Retour au début','destination': 'debut',},
         ],
@@ -142,6 +145,7 @@ chapters = {
 }
 
 
+//boutonChapter.addEventListener('click')
 
 function goToChapter(chapter){
         if(chapters[chapter]){
@@ -159,23 +163,31 @@ function goToChapter(chapter){
             titreChapter.innerText = chapters[chapter].titre;
             texteChapter.innerText = chapters[chapter].description;
             imageChapter.src = chapters[chapter].image;
+            div.innerHTML = '';
 
+            chapters[chapter].bouton.forEach( function (bout){
+                let createNewButton = document.createElement('button');
+                
+
+                createNewButton.innerHTML = `${bout.titre}`;
+                createNewButton.addEventListener('click', () => goToChapter(bout.destination));
+                //console.log(`${bout.titre} \nTapez: goToChapter(\'${bout.destination}\')`  );
+
+                div.appendChild(createNewButton);
+            });
+        }
             
 
 
-            console.log(chapters[chapter].titre);
-            console.log(chapters[chapter].description);
-            console.log("Options:")
+            //console.log(chapters[chapter].titre);
+            //console.log(chapters[chapter].description);
+            //console.log("Options:")
 
-            chapters[chapter].bouton.forEach( function (bout){
-
-                boutonChapter.innerHTML = `${bout.titre}`;
-                console.log(`${bout.titre} \nTapez: goToChapter(\'${bout.destination}\')`  );
-            });
-        }
+            
+            
         
         else{
-            console.log(`Attention! C'est la mauvaise clé. Veuillez revoir l'appelation plus haut.`);
+            //console.log(`Attention! C'est la mauvaise clé. Veuillez revoir l'appelation plus haut.`);
         }
         return 'Pod A attend votre décision...-..-.-..-';
 }

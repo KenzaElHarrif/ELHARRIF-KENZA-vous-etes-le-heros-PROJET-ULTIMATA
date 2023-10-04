@@ -6,7 +6,7 @@
 :root{
     --dun: #afaa96;
     --bone: #D2CCB4;
-    --black-olive: #46433C;
+    --black-olive: black;
     --khaki: #C2BCA4;
 }
 
@@ -26,7 +26,7 @@ body {
 
 .game{
     width: 900px;
-    height: 650px;
+    min-height: 650px;
     display: flex;
     flex-direction: column;
     align-items: center;
