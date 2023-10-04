@@ -6,7 +6,7 @@
 :root{
     --dun: #afaa96;
     --bone: #D2CCB4;
-    --black-olive: black;
+    --black-olive: #46433C;
     --khaki: #C2BCA4;
 }
 
@@ -45,6 +45,7 @@ body {
 }
 
 .button {
+    
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -75,6 +76,7 @@ p {
 }
 
 button {
+    cursor: pointer;
     font-family: Open Sans;
     font-weight: 600;
 
