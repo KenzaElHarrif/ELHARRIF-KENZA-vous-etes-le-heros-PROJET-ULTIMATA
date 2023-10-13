@@ -16,4 +16,4 @@
 
 ## Diagramme
 
-![Schéma du projet](assets/images/schema.png)
+![Schéma du projet](assets/drawio/schema.png)
