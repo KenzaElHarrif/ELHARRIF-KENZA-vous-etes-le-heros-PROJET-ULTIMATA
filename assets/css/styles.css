@@ -8,6 +8,9 @@
     --bone: #D2CCB4;
     --black-olive: #46433C;
     --khaki: #C2BCA4;
+    --blanc: white;
+    --noir: black;
+    --gris: grey;
 }
 
 body {

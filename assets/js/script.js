@@ -147,6 +147,8 @@ chapters = {
 
 //boutonChapter.addEventListener('click')
 
+//const myChapter = chapters[chapter]; pour remplacer tous les chapters[chapter]
+
 function goToChapter(chapter){
         if(chapters[chapter]){
             if(chapter == 'robot'){
@@ -189,7 +191,7 @@ function goToChapter(chapter){
         else{
             //console.log(`Attention! C'est la mauvaise clé. Veuillez revoir l'appelation plus haut.`);
         }
-        return 'Pod A attend votre décision...-..-.-..-';
+        //return 'Pod A attend votre décision...-..-.-..-';
 }
 
 goToChapter('debut');
