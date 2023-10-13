@@ -150,7 +150,8 @@ chapters = {
 //const myChapter = chapters[chapter]; pour remplacer tous les chapters[chapter]
 
 function goToChapter(chapter){
-        if(chapters[chapter]){
+    const myChapter = chapters[chapter];
+        if(myChapter){
             if(chapter == 'robot'){
                 chapters.simone.bouton[1].destination = simoneDestiRobot;
             }
@@ -162,12 +163,12 @@ function goToChapter(chapter){
             //If au dessus est pour le chapitre secret (plot twist). Si on prend le chemin des robots alors le bouton va changer pour la direction du chapitre secret.
             //Else if est pour réinitialiser les boutons au choix initial quand on retourne au début, sans à avoir recharger la page.
 
-            titreChapter.innerText = chapters[chapter].titre;
-            texteChapter.innerText = chapters[chapter].description;
-            imageChapter.src = chapters[chapter].image;
+            titreChapter.innerText = myChapter.titre;
+            texteChapter.innerText = myChapter.description;
+            imageChapter.src = myChapter.image;
             div.innerHTML = '';
 
-            chapters[chapter].bouton.forEach( function (bout){
+            myChapter.bouton.forEach( function (bout){
                 let createNewButton = document.createElement('button');
                 
 
@@ -188,9 +189,9 @@ function goToChapter(chapter){
             
             
         
-        else{
-            //console.log(`Attention! C'est la mauvaise clé. Veuillez revoir l'appelation plus haut.`);
-        }
+        /*else{
+            console.log(`Attention! C'est la mauvaise clé. Veuillez revoir l'appelation plus haut.`);
+        }*/
         //return 'Pod A attend votre décision...-..-.-..-';
 }
 
