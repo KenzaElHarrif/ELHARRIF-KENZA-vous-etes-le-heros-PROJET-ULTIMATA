@@ -1,8 +1,3 @@
-@font-face {
-    src: url(../fonts/Miracle\ World.otf) format(opentype) ;
-    font-family: Miracle;
-}
-
 :root{
     --dun: #afaa96;
     --bone: #D2CCB4;

@@ -1,7 +1,5 @@
 //NOTE SUR LE TEXTE: Puisque le narrateur est un robot accompagnateur (Pod), à certains endroit le texte est FAIT EXPRÈS pour être inlisible, comme un glitch, une erreur, etc.
-//C'est parties ne sont pas des erreurs dans le code.
-
-
+//Ces parties ne sont pas des erreurs dans le code.
 
 //Variables html
 
@@ -11,17 +9,12 @@ let texteChapter = document.querySelector('p');
 let boutonChapter = document.querySelector('button');
 let div = document.querySelector('.button');
 
-
-
-
-
 //variables chapitre secret
 
 const simoneDestiInit= 'danse';
 const simoneDestiRobot = 'choix';
 
 simoneDesti = simoneDestiInit;
-
 
 chapters = {
     debut :{
@@ -141,13 +134,7 @@ chapters = {
             {titre: 'Retour au début','destination': 'debut',},
         ],
     },
-
 }
-
-
-//boutonChapter.addEventListener('click')
-
-//const myChapter = chapters[chapter]; pour remplacer tous les chapters[chapter]
 
 function goToChapter(chapter){
     const myChapter = chapters[chapter];
@@ -171,28 +158,12 @@ function goToChapter(chapter){
             myChapter.bouton.forEach( function (bout){
                 let createNewButton = document.createElement('button');
                 
-
                 createNewButton.innerHTML = `${bout.titre}`;
                 createNewButton.addEventListener('click', () => goToChapter(bout.destination));
-                //console.log(`${bout.titre} \nTapez: goToChapter(\'${bout.destination}\')`  );
 
                 div.appendChild(createNewButton);
             });
         }
-            
-
-
-            //console.log(chapters[chapter].titre);
-            //console.log(chapters[chapter].description);
-            //console.log("Options:")
-
-            
-            
-        
-        /*else{
-            console.log(`Attention! C'est la mauvaise clé. Veuillez revoir l'appelation plus haut.`);
-        }*/
-        //return 'Pod A attend votre décision...-..-.-..-';
 }
 
 goToChapter('debut');
