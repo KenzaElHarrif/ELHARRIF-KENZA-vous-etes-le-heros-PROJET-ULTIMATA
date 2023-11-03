@@ -72,8 +72,9 @@ button {
     background-color: var(--khaki);
     border: none;
     color: var(--black-olive);
-    padding: 8px 50px;
-    text-align: center;
+    padding: 8px;
+    padding-right: 20%;
+    padding-left: 10px;
     margin: 4px 2px;
 
     transition: ease-out 0.6s;
@@ -81,5 +82,5 @@ button {
 
 button:hover {
     color: var(--bone);
-    box-shadow: inset 250px 0 0 0 var(--black-olive);
+    box-shadow: inset 400px 0 0 0 var(--black-olive);
 }

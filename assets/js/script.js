@@ -1,6 +1,11 @@
 //NOTE SUR LE TEXTE: Puisque le narrateur est un robot accompagnateur (Pod), à certains endroit le texte est FAIT EXPRÈS pour être inlisible, comme un glitch, une erreur, etc.
 //Ces parties ne sont pas des erreurs dans le code.
 
+//Simone vid link: https://www.youtube.com/watch?v=mWeOs7wpu70
+//Amusement park vid link: https://www.youtube.com/watch?v=3hB1-c7NyIw
+//Blackbox vid link: https://www.youtube.com/watch?v=2X428xq9YSk
+//
+
 //Variables html
 
 let titreChapter = document.querySelector("h2");
