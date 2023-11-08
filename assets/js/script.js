@@ -14,6 +14,9 @@ let texteChapter = document.querySelector("p");
 let boutonChapter = document.querySelector("button");
 let div = document.querySelector(".button");
 
+let audioClique = new Audio('assets/audio/1256_interface-sound-01.mp3');
+audioClique.volume = 0.10;
+
 //variables chapitre secret
 
 const simoneDestiInit = "danse";
@@ -77,6 +80,7 @@ chapters = {
     titre: `La chanteuse robot`,
     description: `Le signal des blackbox vous conduit au grand théâtre du château central où un ennemi de type Goliath est détecté. Sur une grande scène, Simone, la chanteuse d’opéra robot, entonne un chant horrible et strident. Un chant qui marque le début d’un combat.`,
     image: `./assets/images/simone-entree.jpg`,
+    video: `./assets/video/simone_intro.mp4`,
     bouton: [
       { titre: "Attaque frontale", destination: "marionettes" },
       { titre: "Attaque furtive", destination: simoneDesti },
@@ -88,6 +92,7 @@ chapters = {
     description: `ALERTE! Les androïdes disparus sont des marionnettes de Simone. Vos données sont compromimimimimi..... seeeee....
         \nSimone pirate votre corps et vous en perdez le contrôle. Involontairement, vous tuez 2S... Vous devenez l'arme de Simone, une autre de ses marionnettes.
         \nJe n’ai pas pu sauvegarder vos... d.d.d.d.d.onn.... `,
+    video: `./assets/video/android_simone.mp4`,
     image: `./assets/images/android-marionnettes.png`,
     bouton: [{ titre: "Retour au début", destination: "debut" }],
   },
@@ -124,11 +129,13 @@ chapters = {
     description: `Vous réussissez à emmener Simone dans votre mort à l’aide de votre blackbox. Vos données ont été sauvegardées à la base de YoRha. Malheureusement, les données de 2S seront à jamais perdues.
         \nLors de la détonation de la blackbox, 2S se faufile dans votre mémoire afin de vous partager ses dernières pensées. Elle vous montre l’image d’un grand héro accomplissant sa mission. Vous êtes ce héros, Nier.`,
     image: `./assets/images/blackbox_end.jpg`,
+    video: `./assets/video/blackbox_explose.mp4`,
     bouton: [{ titre: "Retour au début", destination: "debut" }],
   },
 };
 
 function goToChapter(chapter) {
+  audioClique.play();
   const myChapter = chapters[chapter];
   if (myChapter) {
     if (chapter == "robot") {
@@ -152,7 +159,7 @@ function goToChapter(chapter) {
       createNewButton.addEventListener("click", () =>
         goToChapter(bout.destination)
       );
-
+      //audioClique.play();
       div.appendChild(createNewButton);
     });
   }
