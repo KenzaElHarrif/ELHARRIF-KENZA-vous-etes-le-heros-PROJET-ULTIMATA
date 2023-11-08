@@ -12,10 +12,27 @@ let titreChapter = document.querySelector("h2");
 let imageChapter = document.querySelector(".situation");
 let texteChapter = document.querySelector("p");
 let boutonChapter = document.querySelector("button");
+let maVideo = document.querySelector("#situationVideo");
 let div = document.querySelector(".button");
+let audioMute = document.querySelector("#checkbox-32");
+const myVolume = 0.1;
 
-let audioClique = new Audio('assets/audio/1256_interface-sound-01.mp3');
-audioClique.volume = 0.10;
+let audioClique = new Audio("assets/audio/1256_interface-sound-01.mp3");
+audioClique.volume = myVolume;
+let audioHover = new Audio("assets/audio/1890_button-click-62.mp3");
+audioHover.volume = myVolume;
+
+//Checkbox volume
+
+audioMute.addEventListener("change", function () {
+  if (this.checked) {
+    audioClique.volume = 0;
+    audioHover.volume = 0;
+  } else {
+    audioClique.volume = myVolume;
+    audioHover.volume = myVolume;
+  }
+});
 
 //variables chapitre secret
 
@@ -79,7 +96,6 @@ chapters = {
   simone: {
     titre: `La chanteuse robot`,
     description: `Le signal des blackbox vous conduit au grand théâtre du château central où un ennemi de type Goliath est détecté. Sur une grande scène, Simone, la chanteuse d’opéra robot, entonne un chant horrible et strident. Un chant qui marque le début d’un combat.`,
-    image: `./assets/images/simone-entree.jpg`,
     video: `./assets/video/simone_intro.mp4`,
     bouton: [
       { titre: "Attaque frontale", destination: "marionettes" },
@@ -93,7 +109,6 @@ chapters = {
         \nSimone pirate votre corps et vous en perdez le contrôle. Involontairement, vous tuez 2S... Vous devenez l'arme de Simone, une autre de ses marionnettes.
         \nJe n’ai pas pu sauvegarder vos... d.d.d.d.d.onn.... `,
     video: `./assets/video/android_simone.mp4`,
-    image: `./assets/images/android-marionnettes.png`,
     bouton: [{ titre: "Retour au début", destination: "debut" }],
   },
 
@@ -128,7 +143,6 @@ chapters = {
     titre: `Unité 1 Type Nier`,
     description: `Vous réussissez à emmener Simone dans votre mort à l’aide de votre blackbox. Vos données ont été sauvegardées à la base de YoRha. Malheureusement, les données de 2S seront à jamais perdues.
         \nLors de la détonation de la blackbox, 2S se faufile dans votre mémoire afin de vous partager ses dernières pensées. Elle vous montre l’image d’un grand héro accomplissant sa mission. Vous êtes ce héros, Nier.`,
-    image: `./assets/images/blackbox_end.jpg`,
     video: `./assets/video/blackbox_explose.mp4`,
     bouton: [{ titre: "Retour au début", destination: "debut" }],
   },
@@ -137,11 +151,21 @@ chapters = {
 function goToChapter(chapter) {
   audioClique.play();
   const myChapter = chapters[chapter];
+  const myVid = myChapter.video;
+
   if (myChapter) {
     if (chapter == "robot") {
       chapters.simone.bouton[1].destination = simoneDestiRobot;
     } else if (chapter == "debut") {
       chapters.simone.bouton[1].destination = simoneDestiInit;
+    }
+
+    if (myVid) {
+      maVideo.classList.remove("hidden");
+      maVideo.src = myVid;
+      maVideo.play();
+    } else {
+      maVideo.classList.add("hidden");
     }
 
     //If au dessus est pour le chapitre secret (plot twist). Si on prend le chemin des robots alors le bouton va changer pour la direction du chapitre secret.
@@ -159,6 +183,10 @@ function goToChapter(chapter) {
       createNewButton.addEventListener("click", () =>
         goToChapter(bout.destination)
       );
+      createNewButton.addEventListener("mouseenter", () => {
+        audioHover.currentTime = 0;
+        audioHover.play();
+      });
       //audioClique.play();
       div.appendChild(createNewButton);
     });

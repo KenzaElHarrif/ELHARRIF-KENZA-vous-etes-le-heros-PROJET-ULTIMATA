@@ -16,6 +16,7 @@
         <div class="logo"><img src="assets/images/essaie-titre-3.png" alt=""></div> <!--<h1>Projet: Ultimata</h1>-->
         <div class="chapter"><h2>Valzer di Coppelia</h2></div>
         <div class="image"><img class="situation" src="assets/images/2b_jungle.jpg" alt=""></div>
+        <div class="video"><video src="" class="hidden" id="situationVideo" loop muted></video></div>
 
         <div class="text">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
@@ -23,9 +24,19 @@
 
         <div class="button">
         </div>
-            
-    </div>
-
+       <!-- <div><label for="">Mute</label><input type="checkbox" name="" id="mute" class="checkbox"></div>-->
+       <!--HTML en dessous est pour le style checkbox pris sur ce site: https://getcssscan.com/css-checkboxes-examples--> 
+       <div class="checkbox-wrapper-32">
+        <input type="checkbox" name="checkbox-32" id="checkbox-32">
+        <label for="checkbox-32">
+          Checkbox
+        </label>
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 10 10 L 90 90" stroke="#000" stroke-dasharray="113" stroke-dashoffset="113"></path>
+          <path d="M 90 10 L 10 90" stroke="#000" stroke-dasharray="113" stroke-dashoffset="113"></path>
+        </svg>
+      </div>
+      
     <script src="assets/js/script.js"></script>
 </body>
 </html>
