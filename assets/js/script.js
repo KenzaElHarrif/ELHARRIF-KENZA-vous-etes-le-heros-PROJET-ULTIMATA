@@ -1,11 +1,6 @@
 //NOTE SUR LE TEXTE: Puisque le narrateur est un robot accompagnateur (Pod), à certains endroit le texte est FAIT EXPRÈS pour être inlisible, comme un glitch, une erreur, etc.
 //Ces parties ne sont pas des erreurs dans le code.
 
-//Simone vid link: https://www.youtube.com/watch?v=mWeOs7wpu70
-//Amusement park vid link: https://www.youtube.com/watch?v=3hB1-c7NyIw
-//Blackbox vid link: https://www.youtube.com/watch?v=2X428xq9YSk
-//
-
 //Variables html
 
 let titreChapter = document.querySelector("h2");
@@ -17,6 +12,10 @@ let div = document.querySelector(".button");
 let audioMute = document.querySelector("#checkbox-32");
 const myVolume = 0.1;
 
+let musiqueDebut = new Audio("assets/audio/debut.mp3");
+musiqueDebut.volume = myVolume;
+let musiqueSimone = new Audio("assets/audio/simone_cry.mp3");
+musiqueSimone.volume = myVolume;
 let audioClique = new Audio("assets/audio/1256_interface-sound-01.mp3");
 audioClique.volume = myVolume;
 let audioHover = new Audio("assets/audio/1890_button-click-62.mp3");
@@ -28,9 +27,13 @@ audioMute.addEventListener("change", function () {
   if (this.checked) {
     audioClique.volume = 0;
     audioHover.volume = 0;
+    musiqueDebut.volume = 0;
+    musiqueSimone.volume = 0;
   } else {
     audioClique.volume = myVolume;
     audioHover.volume = myVolume;
+    musiqueDebut.volume = myVolume;
+    musiqueSimone.volume = myVolume;
   }
 });
 
@@ -48,7 +51,7 @@ chapters = {
         \nIl y a de nombreuses années, une menace extraterrestre a brisé l’âge d’or de l’humanité en déployant une redoutable armada de robots. Face à cette catastrophe, les survivants ont pris refuge sur la lune. Des siècles se sont écoulés depuis, et c’est à ce moment que l’organisation YoRha a vu le jour.
         \nLa guerre n’a pourtant cessé de continuer jusqu’à ce jour. C’est pour cette raison que vous, soldat, avez pour mission de vous battre en l’honneur de l’humanité afin de reprendre la planète natale de nos créateurs. Nous avons confiance en vous. Gloire... À l’humanité.`,
     image: `./assets/images/gloire-a-humanite.png`,
-    bouton: [{ titre: "Continuer", destination: "activation" }],
+    bouton: [{ titre: "⇾ Continuer", destination: "activation" }],
   },
 
   activation: {
@@ -58,8 +61,8 @@ chapters = {
         \nAlerte ! Lorsque vous arrivés à l’entrée du parc d’attractions, des robots semblent adopter un comportement pacifique.`,
     image: `./assets/images/activation.gif`,
     bouton: [
-      { titre: "Attaquer les robots", destination: "robot" },
-      { titre: "Continuer son chemin", destination: "blackbox" },
+      { titre: "⇾ Attaquer les robots", destination: "robot" },
+      { titre: "⇾ Continuer son chemin", destination: "blackbox" },
     ],
   },
 
@@ -69,7 +72,7 @@ chapters = {
         \n..-…--..---..-..-.---..-
         \nC'est étrange. Je n’arrive pas à traduire ce code. Veuillez continuer votre mission.`,
     image: `./assets/images/attaque-robots.jpg`,
-    bouton: [{ titre: "Continuer son chemin", destination: "blackbox" }],
+    bouton: [{ titre: "⇾ Continuer son chemin", destination: "blackbox" }],
   },
 
   blackbox: {
@@ -78,8 +81,8 @@ chapters = {
         \nPermission de vous rappeler ce qu’est une blackbox, 1N. La blackbox constitue le noyau essentiel d’un androïde. Ce noyau permet l'exécution de multiples fonctions, telles que, dans ce cas précis, celle d’un traqueur. En cas d’extrême urgence, vous pouvez utiliser votre blackbox comme arme nucléaire.`,
     image: `./assets/images/alert-blackbox.gif`,
     bouton: [
-      { titre: "Retrouver les blackbox", destination: "simone" },
-      { titre: "Continuer son chemin", destination: "verite" },
+      { titre: "⇾ Retrouver les blackbox", destination: "simone" },
+      { titre: "⇾ Continuer son chemin", destination: "verite" },
     ],
   },
 
@@ -90,7 +93,7 @@ chapters = {
         \nVous mourrez...
         \nDonnées envoyées à la base. Vous pouvez recommencer. `,
     image: `./assets/images/verite-deserte.jpg`,
-    bouton: [{ titre: "Retour au début", destination: "debut" }],
+    bouton: [{ titre: "⇾ Retour au début", destination: "debut" }],
   },
 
   simone: {
@@ -98,8 +101,8 @@ chapters = {
     description: `Le signal des blackbox vous conduit au grand théâtre du château central où un ennemi de type Goliath est détecté. Sur une grande scène, Simone, la chanteuse d’opéra robot, entonne un chant horrible et strident. Un chant qui marque le début d’un combat.`,
     video: `./assets/video/simone_intro.mp4`,
     bouton: [
-      { titre: "Attaque frontale", destination: "marionettes" },
-      { titre: "Attaque furtive", destination: simoneDesti },
+      { titre: "⇾ Attaque frontale", destination: "marionettes" },
+      { titre: "⇾ Attaque furtive", destination: simoneDesti },
     ],
   },
 
@@ -108,8 +111,8 @@ chapters = {
     description: `ALERTE! Les androïdes disparus sont des marionnettes de Simone. Vos données sont compromimimimimi..... seeeee....
         \nSimone pirate votre corps et vous en perdez le contrôle. Involontairement, vous tuez 2S... Vous devenez l'arme de Simone, une autre de ses marionnettes.
         \nJe n’ai pas pu sauvegarder vos... d.d.d.d.d.onn.... `,
-    video: `./assets/video/android_simone.mp4`,
-    bouton: [{ titre: "Retour au début", destination: "debut" }],
+    video: `./assets/video/simone_marionette.mp4`,
+    bouton: [{ titre: "⇾ Retour au début", destination: "debut" }],
   },
 
   danse: {
@@ -118,7 +121,7 @@ chapters = {
         \nGrâce à cette déstabilisation, vous abattez Simone dans une grande danse déchaînée. Mais sa mémoire vous laisse troublé. Pour l’instant, le rapport à envoyer à la base est plus important.
         \nBravo pour cette mission 1N... Gloire à l’humanité.`,
     image: `./assets/images/grande-danse-simone.jpg`,
-    bouton: [{ titre: "Retour au début", destination: "debut" }],
+    bouton: [{ titre: "⇾ Retour au début", destination: "debut" }],
   },
 
   choix: {
@@ -127,8 +130,8 @@ chapters = {
         \nUne décision finale est requise.`,
     image: `./assets/images/choix-nier-scanner.gif`,
     bouton: [
-      { titre: "Sauver 2S", destination: "scanner" },
-      { titre: "Sauver 1N", destination: "nier" },
+      { titre: "♡ Sauver 2S", destination: "scanner" },
+      { titre: "♡ Sauver 1N", destination: "nier" },
     ],
   },
 
@@ -136,7 +139,7 @@ chapters = {
     titre: `Unité 2 Type Scanner`,
     description: `Simone n’a pas été combattu, mais les données de 2S ont été sauvegardés et renvoyés à la base. Votre mort a laissé 2S troublé. Pour une raison inconnue de tous, 2S a déserté YoRha quelques mois après votre mort. Aujourd’hui, j’accompagne 2S partout, elle se bat maintenant en votre mémoire... `,
     image: `./assets/images/2b_jungle.jpg`,
-    bouton: [{ titre: "Retour au début", destination: "debut" }],
+    bouton: [{ titre: "⇾ Retour au début", destination: "debut" }],
   },
 
   nier: {
@@ -144,7 +147,7 @@ chapters = {
     description: `Vous réussissez à emmener Simone dans votre mort à l’aide de votre blackbox. Vos données ont été sauvegardées à la base de YoRha. Malheureusement, les données de 2S seront à jamais perdues.
         \nLors de la détonation de la blackbox, 2S se faufile dans votre mémoire afin de vous partager ses dernières pensées. Elle vous montre l’image d’un grand héro accomplissant sa mission. Vous êtes ce héros, Nier.`,
     video: `./assets/video/blackbox_explose.mp4`,
-    bouton: [{ titre: "Retour au début", destination: "debut" }],
+    bouton: [{ titre: "⇾ Retour au début", destination: "debut" }],
   },
 };
 
@@ -167,6 +170,23 @@ function goToChapter(chapter) {
     } else {
       maVideo.classList.add("hidden");
     }
+
+    if(myChapter == chapters.debut){
+      musiqueDebut.play();
+    }
+    else if(myChapter == chapters.simone){
+      musiqueDebut.pause();
+    }
+
+    setTimeout(function() {
+      if(myChapter == chapters.simone){
+      musiqueSimone.play();
+      }
+      else if(myChapter == chapters.debut){
+        musiqueSimone.pause();
+      }
+    }, 11000);
+    
 
     //If au dessus est pour le chapitre secret (plot twist). Si on prend le chemin des robots alors le bouton va changer pour la direction du chapitre secret.
     //Else if est pour réinitialiser les boutons au choix initial quand on retourne au début, sans à avoir recharger la page.

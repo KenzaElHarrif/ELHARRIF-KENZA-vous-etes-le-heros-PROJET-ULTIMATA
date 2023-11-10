@@ -2,10 +2,11 @@
     --dun: #afaa96;
     --bone: #D2CCB4;
     --black-olive: #46433C;
-    --khaki: #C2BCA4;
-    --blanc: white;
-    --noir: black;
-    --gris: grey;
+    --khaki: rgb(194, 188, 164);
+    --blanc: #F6F0EB;
+    --noir: #171627;
+    --gris: #D8CFD0;
+    --grisFonce: #948C91;
     --rouge: rgb(199, 59, 16);
 }
 
@@ -20,6 +21,8 @@ body {
     background-size: 7px 7px;
     background-image: linear-gradient(90deg, transparent, transparent 6px, rgba(0,0,0,.07) 7px),
     linear-gradient(transparent, transparent 6px, rgba(0,0,0,.07) 7px);
+
+    
 }
 
 .game{
@@ -30,7 +33,7 @@ body {
     align-items: center;
     justify-content: space-around;
     background-color: var(--bone);
-    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
     padding: 20px;
 }
 
@@ -81,6 +84,7 @@ button {
     cursor: pointer;
     font-family: Open Sans;
     font-weight: 600;
+    font-size: 15px;
 
     background-color: var(--khaki);
     border: none;
@@ -88,7 +92,8 @@ button {
     padding: 8px;
     padding-right: 20%;
     padding-left: 10px;
-    margin: 4px 2px;
+    margin: 4px;
+    margin-bottom: 5%;
 
     transition: ease-out 0.6s;
 }
