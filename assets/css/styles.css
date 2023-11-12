@@ -103,6 +103,32 @@ button:hover {
     box-shadow: inset 400px 0 0 0 var(--black-olive);
 }
 
+.reset{
+    cursor: pointer;
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 15px;
+
+    background-color: var(--khaki);
+    border: none;
+    color: var(--black-olive);
+    padding: 8px 15px;
+    margin: auto;
+}
+
+.reset:hover{
+  color: var(--bone);
+  background-color: var(--black-olive);
+  box-shadow: none;
+}
+
+.settings{
+  width: 100%;
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+}
+
 /*Style checkbox pris ici: pris sur ce site: https://getcssscan.com/css-checkboxes-examples*/
 
 .checkbox-wrapper-32 {

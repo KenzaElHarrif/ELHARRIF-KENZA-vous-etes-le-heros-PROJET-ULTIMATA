@@ -7,6 +7,7 @@ let titreChapter = document.querySelector("h2");
 let imageChapter = document.querySelector(".situation");
 let texteChapter = document.querySelector("p");
 let boutonChapter = document.querySelector("button");
+let resetBtn = document.querySelector(".reset");
 let maVideo = document.querySelector("#situationVideo");
 let div = document.querySelector(".button");
 let audioMute = document.querySelector("#checkbox-32");
@@ -98,7 +99,8 @@ chapters = {
 
   simone: {
     titre: `La chanteuse robot`,
-    description: `Le signal des blackbox vous conduit au grand théâtre du château central où un ennemi de type Goliath est détecté. Sur une grande scène, Simone, la chanteuse d’opéra robot, entonne un chant horrible et strident. Un chant qui marque le début d’un combat.`,
+    description: `Le signal des blackbox vous conduit au grand théâtre du château central où un ennemi de type Goliath est détecté.
+    \n ALERTE! Sur une grande scène, Simone, la chanteuse d’opéra robot, entonne un chant horrible et strident. Un chant qui marque le début d’un combat.`,
     video: `./assets/video/simone_intro.mp4`,
     bouton: [
       { titre: "⇾ Attaque frontale", destination: "marionettes" },
@@ -152,14 +154,18 @@ chapters = {
 };
 
 function goToChapter(chapter) {
+  localStorage.setItem("currentChapter", chapter);
+
   audioClique.play();
   const myChapter = chapters[chapter];
   const myVid = myChapter.video;
 
   if (myChapter) {
     if (chapter == "robot") {
+      localStorage.setItem("myTwist", true);
       chapters.simone.bouton[1].destination = simoneDestiRobot;
     } else if (chapter == "debut") {
+      localStorage.setItem("myTwist", false);
       chapters.simone.bouton[1].destination = simoneDestiInit;
     }
 
@@ -172,6 +178,9 @@ function goToChapter(chapter) {
     }
 
     if(myChapter == chapters.debut){
+      //la musique start pas si on fait pas ctrl-s sur ce dossier dans vsCode ???
+      musiqueSimone.pause();
+      musiqueDebut.currentTime = 0;
       musiqueDebut.play();
     }
     else if(myChapter == chapters.simone){
@@ -180,13 +189,10 @@ function goToChapter(chapter) {
 
     setTimeout(function() {
       if(myChapter == chapters.simone){
+      musiqueSimone.currentTime = 0;
       musiqueSimone.play();
       }
-      else if(myChapter == chapters.debut){
-        musiqueSimone.pause();
-      }
-    }, 11000);
-    
+    }, 5000);
 
     //If au dessus est pour le chapitre secret (plot twist). Si on prend le chemin des robots alors le bouton va changer pour la direction du chapitre secret.
     //Else if est pour réinitialiser les boutons au choix initial quand on retourne au début, sans à avoir recharger la page.
@@ -207,10 +213,25 @@ function goToChapter(chapter) {
         audioHover.currentTime = 0;
         audioHover.play();
       });
-      //audioClique.play();
+
       div.appendChild(createNewButton);
     });
   }
 }
 
-goToChapter("debut");
+resetBtn.addEventListener("click", function(){
+  localStorage.clear();
+  goToChapter("debut");
+})
+
+let currentChapter = localStorage.getItem("currentChapter");
+
+if(currentChapter !== null){
+  if(localStorage.getItem("myTwist") == true){
+    chapters.simone.bouton[1].destination = simoneDestiRobot;
+  }
+  goToChapter(currentChapter);
+}
+else{
+  goToChapter("debut");
+}
