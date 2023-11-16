@@ -15,10 +15,13 @@ const myVolume = 0.1;
 
 let musiqueDebut = new Audio("assets/audio/debut.mp3");
 musiqueDebut.volume = myVolume;
+
 let musiqueSimone = new Audio("assets/audio/simone_cry.mp3");
 musiqueSimone.volume = myVolume;
+
 let audioClique = new Audio("assets/audio/1256_interface-sound-01.mp3");
 audioClique.volume = myVolume;
+
 let audioHover = new Audio("assets/audio/1890_button-click-62.mp3");
 audioHover.volume = myVolume;
 
