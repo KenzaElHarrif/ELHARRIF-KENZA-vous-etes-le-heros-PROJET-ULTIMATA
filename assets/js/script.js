@@ -154,6 +154,8 @@ chapters = {
 };
 
 function goToChapter(chapter) {
+
+  //local storage pour sauvegarder
   localStorage.setItem("currentChapter", chapter);
 
   audioClique.play();
@@ -162,6 +164,7 @@ function goToChapter(chapter) {
 
   if (myChapter) {
     if (chapter == "robot") {
+      //local pour sauvegarder la twist
       localStorage.setItem("myTwist", true);
       chapters.simone.bouton[1].destination = simoneDestiRobot;
     } else if (chapter == "debut") {
@@ -177,20 +180,19 @@ function goToChapter(chapter) {
       maVideo.classList.add("hidden");
     }
 
-    if(myChapter == chapters.debut){
+    if (myChapter == chapters.debut) {
       //la musique start pas si on fait pas ctrl-s sur ce dossier dans vsCode ou si on retourne pas dans goToChapter("debut")
       musiqueSimone.pause();
       musiqueDebut.currentTime = 0;
       musiqueDebut.play();
-    }
-    else if(myChapter == chapters.simone){
+    } else if (myChapter == chapters.simone) {
       musiqueDebut.pause();
     }
 
-    setTimeout(function() {
-      if(myChapter == chapters.simone){
-      musiqueSimone.currentTime = 0;
-      musiqueSimone.play();
+    setTimeout(function () {
+      if (myChapter == chapters.simone) {
+        musiqueSimone.currentTime = 0;
+        musiqueSimone.play();
       }
     }, 5000);
 
@@ -219,19 +221,18 @@ function goToChapter(chapter) {
   }
 }
 
-resetBtn.addEventListener("click", function(){
+resetBtn.addEventListener("click", function () {
   localStorage.clear();
   goToChapter("debut");
-})
+});
 
 let currentChapter = localStorage.getItem("currentChapter");
 
-if(currentChapter !== null){
-  if(localStorage.getItem("myTwist") == true){
+if (currentChapter !== null) {
+  if (localStorage.getItem("myTwist") == true) {
     chapters.simone.bouton[1].destination = simoneDestiRobot;
   }
   goToChapter(currentChapter);
-}
-else{
+} else {
   goToChapter("debut");
 }
