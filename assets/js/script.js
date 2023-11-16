@@ -178,7 +178,7 @@ function goToChapter(chapter) {
     }
 
     if(myChapter == chapters.debut){
-      //la musique start pas si on fait pas ctrl-s sur ce dossier dans vsCode ???
+      //la musique start pas si on fait pas ctrl-s sur ce dossier dans vsCode ou si on retourne pas dans goToChapter("debut")
       musiqueSimone.pause();
       musiqueDebut.currentTime = 0;
       musiqueDebut.play();
