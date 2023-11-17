@@ -11,6 +11,7 @@
 }
 
 body {
+    overflow: hidden;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -34,15 +35,19 @@ body {
     justify-content: space-around;
     background-color: var(--bone);
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 10px;
+
+    background-size: 7px 7px;
+    background-image: linear-gradient(90deg, transparent, transparent 6px, rgba(0,0,0,.07) 7px),
+    linear-gradient(transparent, transparent 6px, rgba(0,0,0,.07) 7px);
 }
 
 .image {
-    width: 550px;
+    width: 740px;
 }
 
 .text {
-    width: 850px;
+    width: 740px;
 }
 
 .button {
@@ -54,16 +59,16 @@ body {
 
 #situationVideo{
     width: 100%;
-    box-shadow: 5px 5px 0 1px rgba(176,169,150,1);
+    box-shadow: 8px 8px 0 1px rgba(176,169,150,1);
 }
 
 .video{
-    width: 550px;
+    width: 740px;
 }
 
 .situation{
     width: 100%;
-    box-shadow: 5px 5px 0 1px rgba(176,169,150,1);
+    box-shadow: 8px 8px 0 1px rgba(176,169,150,1);
 }
 
 .hidden{
@@ -93,7 +98,7 @@ button {
     padding-right: 20%;
     padding-left: 10px;
     margin: 4px;
-    margin-bottom: 5%;
+    margin-bottom: 5px;
 
     transition: ease-out 0.6s;
 }
@@ -101,6 +106,10 @@ button {
 button:hover {
     color: var(--bone);
     box-shadow: inset 400px 0 0 0 var(--black-olive);
+}
+
+.button{
+  width: 880px;
 }
 
 .reset{
@@ -113,7 +122,8 @@ button:hover {
     border: none;
     color: var(--black-olive);
     padding: 8px 15px;
-    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .reset:hover{
@@ -124,9 +134,10 @@ button:hover {
 
 .settings{
   width: 100%;
+
   display: flex;
-  justify-content:flex-end;
-  align-items: center;
+  flex-direction: column-reverse;
+  align-items: flex-start;
 }
 
 /*Style checkbox pris ici: pris sur ce site: https://getcssscan.com/css-checkboxes-examples*/
@@ -200,4 +211,35 @@ button:hover {
   .checkbox-wrapper-32 input[type="checkbox"]:checked ~ svg path {
     stroke-dashoffset: 0;
     stroke-width: calc(var(--size) / 2);
+  }
+
+  /*code pour le grain trouvé ici https://codepen.io/iceable/pen/yLBrZOd*/
+  .bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: bg-animation .2s infinite;
+    opacity: 0.9;
+    visibility: visible;
+    pointer-events: none;
+  }
+  
+  @keyframes bg-animation {
+      0% { transform: translate(0,0) }
+      10% { transform: translate(-5%,-5%) }
+      20% { transform: translate(-10%,5%) }
+      30% { transform: translate(5%,-10%) }
+      40% { transform: translate(-5%,15%) }
+      50% { transform: translate(-10%,5%) }
+      60% { transform: translate(15%,0) }
+      70% { transform: translate(0,10%) }
+      80% { transform: translate(-15%,0) }
+      90% { transform: translate(10%,5%) }
+      100% { transform: translate(5%,0) }
   }
