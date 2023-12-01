@@ -5,12 +5,12 @@
     --khaki: rgb(194, 188, 164);
     --blanc: #F6F0EB;
     --noir: #171627;
-    --gris: #D8CFD0;
+    --gris: rgb(216, 207, 208);
     --grisFonce: #948C91;
     --rouge: rgb(199, 59, 16);
 }
 
-body {
+ body {
     overflow: hidden;
     height: 100vh;
     display: flex;
@@ -22,12 +22,85 @@ body {
     background-size: 7px 7px;
     background-image: linear-gradient(90deg, transparent, transparent 6px, rgba(0,0,0,.07) 7px),
     linear-gradient(transparent, transparent 6px, rgba(0,0,0,.07) 7px);
+  }
 
-    
+.game-debut{
+    width: 850px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--noir);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.body-debut{
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grisFonce);
+}
+
+.situation-debut{
+  width: 100%;
+  box-shadow: 8px 8px 0 1px rgb(216, 207, 208,1);
+}
+
+.button-debut{
+  cursor: pointer;
+  font-family: Open Sans;
+  font-weight: 600;
+  font-size: 15px;
+
+  background-color: var(--grisFonce);
+  border: none;
+  color: var(--gris);
+  padding: 8px;
+  padding-right: 20%;
+  padding-left: 10px;
+  margin: 4px;
+  margin-bottom: 5px;
+
+  transition: ease-out 0.6s;
+}
+
+.button-debut:hover{
+  color: var(--noir);
+  box-shadow: inset 400px 0 0 0 var(--gris);
+}
+
+.reset-debut{
+  cursor: pointer;
+    font-family: Open Sans;
+    font-weight: 600;
+    font-size: 15px;
+
+    background-color: var(--grisFonce);
+    border: none;
+    color: var(--blanc);
+    padding: 8px 15px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.reset-debut:hover{
+  color: var(--noir);
+  background-color: var(--gris);
+  box-shadow: none;
+}
+
+.para-debut, .titre-debut, .label-debut{
+  font-family: Open Sans;
+  font-weight: 500;
+  color: var(--blanc);
 }
 
 .game{
-    width: 900px;
+    width: 850px;
     min-height: 650px;
     display: flex;
     flex-direction: column;
@@ -43,7 +116,7 @@ body {
 }
 
 .image {
-    width: 740px;
+    width: 730px;
 }
 
 .text {
@@ -51,11 +124,10 @@ body {
 }
 
 .button {
-    
     width: 100%;
     display: flex;
     justify-content: space-around;
-}
+  }
 
 #situationVideo{
     width: 100%;
@@ -83,6 +155,8 @@ h2, p, label {
 
 p {
     text-align: justify;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 button {
@@ -142,7 +216,7 @@ button:hover {
 
 /*Style checkbox pris ici: pris sur ce site: https://getcssscan.com/css-checkboxes-examples*/
 
-.checkbox-wrapper-32 {
+/*.checkbox-wrapper-32 {
     --size: 20px;
     --border-size: 2px;
 
@@ -211,7 +285,7 @@ button:hover {
   .checkbox-wrapper-32 input[type="checkbox"]:checked ~ svg path {
     stroke-dashoffset: 0;
     stroke-width: calc(var(--size) / 2);
-  }
+  }*/
 
   /*code pour le grain trouvé ici https://codepen.io/iceable/pen/yLBrZOd*/
   .bg {

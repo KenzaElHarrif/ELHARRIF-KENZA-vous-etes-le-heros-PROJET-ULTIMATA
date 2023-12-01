@@ -1,6 +1,8 @@
 //NOTE SUR LE TEXTE: Puisque le narrateur est un robot accompagnateur (Pod), à certains endroit le texte est FAIT EXPRÈS pour être inlisible, comme un glitch, une erreur, etc.
 //Ces parties ne sont pas des erreurs dans le code.
 
+//CE QUI RESTE À FAIRE: FX titre, LocalStorage le mute + style, media queries, placer mes éléments, Git link, remise code + link
+
 //Variables html
 
 let titreChapter = document.querySelector("h2");
@@ -24,6 +26,16 @@ audioClique.volume = myVolume;
 
 let audioHover = new Audio("assets/audio/1890_button-click-62.mp3");
 audioHover.volume = myVolume;
+
+//DOM
+let body = document.querySelector("body");
+let conteneurJeu = document.querySelector(".game");
+let situationJeu =  document.querySelector(".situation");
+let boutonStyle = document.querySelector(".button");
+let boutonResetStyle =  document.querySelector(".reset");
+let p = document.querySelector("p");
+let h2 = document.querySelector("h2");
+let label = document.querySelector("label");
 
 //Checkbox volume
 
@@ -188,8 +200,37 @@ function goToChapter(chapter) {
       musiqueSimone.pause();
       musiqueDebut.currentTime = 0;
       musiqueDebut.play();
-    } else if (myChapter == chapters.simone) {
+
+      //Changement de styles page début.
+      body.classList.add("body-debut");
+      conteneurJeu.classList.add("game-debut");
+      conteneurJeu.classList.remove("game");
+      situationJeu.classList.add("situation-debut");
+      situationJeu.classList.remove("situation");
+
+      boutonResetStyle.classList.add("reset-debut");
+      boutonResetStyle.classList.remove("reset");
+
+      p.classList.add("para-debut");
+      h2.classList.add("titre-debut");
+      label.classList.add("label-debut");
+    }
+    else if (myChapter == chapters.simone) {
       musiqueDebut.pause();
+    }
+
+    else{
+      body.classList.remove("body-debut");
+      conteneurJeu.classList.add("game");
+
+      situationJeu.classList.add("situation");
+
+      boutonResetStyle.classList.add("reset");
+      boutonResetStyle.classList.remove("reset-debut");
+
+      p.classList.remove("para-debut");
+      h2.classList.remove("titre-debut");
+      label.classList.remove("label-debut");
     }
 
     setTimeout(function () {
@@ -218,8 +259,16 @@ function goToChapter(chapter) {
         audioHover.currentTime = 0;
         audioHover.play();
       });
-
       div.appendChild(createNewButton);
+
+      //Changer style des boutons de début.
+      if(myChapter == chapters.debut){
+        createNewButton.classList.add("button-debut");
+      }
+      else{
+        createNewButton.classList.remove("button-debut");
+      }
+
     });
   }
 }
