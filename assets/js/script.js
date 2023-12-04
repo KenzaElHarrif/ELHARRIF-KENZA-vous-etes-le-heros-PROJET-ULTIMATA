@@ -1,7 +1,7 @@
 //NOTE SUR LE TEXTE: Puisque le narrateur est un robot accompagnateur (Pod), à certains endroit le texte est FAIT EXPRÈS pour être inlisible, comme un glitch, une erreur, etc.
 //Ces parties ne sont pas des erreurs dans le code.
 
-//CE QUI RESTE À FAIRE: FX titre, LocalStorage le mute + style, media queries, placer mes éléments, Git link, remise code + link
+//CE QUI RESTE À FAIRE: LocalStorage le mute + style, media queries, placer mes éléments, Git link, remise code + link
 
 //Variables html
 
@@ -36,6 +36,7 @@ let boutonResetStyle =  document.querySelector(".reset");
 let p = document.querySelector("p");
 let h2 = document.querySelector("h2");
 let label = document.querySelector("label");
+let logo = document.querySelector("h1");
 
 //Checkbox volume
 
@@ -67,7 +68,7 @@ chapters = {
         \nIl y a de nombreuses années, une menace extraterrestre a brisé l’âge d’or de l’humanité en déployant une redoutable armada de robots. Face à cette catastrophe, les survivants ont pris refuge sur la lune. Des siècles se sont écoulés depuis, et c’est à ce moment que l’organisation YoRha a vu le jour.
         \nLa guerre n’a pourtant cessé de continuer jusqu’à ce jour. C’est pour cette raison que vous, soldat, avez pour mission de vous battre en l’honneur de l’humanité afin de reprendre la planète natale de nos créateurs. Nous avons confiance en vous. Gloire... À l’humanité.`,
     image: `./assets/images/gloire-a-humanite.png`,
-    bouton: [{ titre: "⇾ Continuer", destination: "activation" }],
+    bouton: [{ titre: "⇾ Commencer", destination: "activation" }],
   },
 
   activation: {
@@ -214,6 +215,7 @@ function goToChapter(chapter) {
       p.classList.add("para-debut");
       h2.classList.add("titre-debut");
       label.classList.add("label-debut");
+      logo.classList.add("hero");
     }
     else if (myChapter == chapters.simone) {
       musiqueDebut.pause();
@@ -231,6 +233,9 @@ function goToChapter(chapter) {
       p.classList.remove("para-debut");
       h2.classList.remove("titre-debut");
       label.classList.remove("label-debut");
+
+      logo.classList.remove("hero")
+      logo.classList.add("hero-all");
     }
 
     setTimeout(function () {
