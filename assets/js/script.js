@@ -41,6 +41,7 @@ let logo = document.querySelector("h1");
 //Checkbox volume
 
 audioMute.addEventListener("change", function () {
+
   if (this.checked) {
     audioClique.volume = 0;
     audioHover.volume = 0;
