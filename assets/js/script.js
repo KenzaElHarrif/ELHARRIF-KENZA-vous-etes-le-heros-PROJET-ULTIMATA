@@ -1,7 +1,7 @@
 //NOTE SUR LE TEXTE: Puisque le narrateur est un robot accompagnateur (Pod), à certains endroit le texte est FAIT EXPRÈS pour être inlisible, comme un glitch, une erreur, etc.
 //Ces parties ne sont pas des erreurs dans le code.
 
-//CE QUI RESTE À FAIRE: LocalStorage le mute + style, media queries, placer mes éléments, Git link, remise code + link
+//CE QUI RESTE À FAIRE: LocalStorage le mute, Git link, remise code + link
 
 //Variables html
 
@@ -88,7 +88,7 @@ chapters = {
     description: `Vous attaquez les robots, ils n’attaquent pas en retour. 2S a piraté l’un d’eux, il semble émettre un message... Lecture du message.
         \n..-…--..---..-..-.---..-
         \nC'est étrange. Je n’arrive pas à traduire ce code. Veuillez continuer votre mission.`,
-    image: `./assets/images/attaque-robots.jpg`,
+    image: `./assets/images/nier_automata_attack_robot.jpg`,
     bouton: [{ titre: "⇾ Continuer son chemin", destination: "blackbox" }],
   },
 
@@ -222,6 +222,8 @@ function goToChapter(chapter) {
     }
 
     else{
+
+      //Remettre style pour tous les chapitres
       body.classList.remove("body-debut");
       conteneurJeu.classList.add("game");
 

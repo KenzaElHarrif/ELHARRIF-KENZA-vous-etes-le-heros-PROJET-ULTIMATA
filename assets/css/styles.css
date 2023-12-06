@@ -16,7 +16,6 @@
 }
 
  body {
-    overflow: hidden;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -30,8 +29,8 @@
   }
 
 .game-debut{
-    width: 850px;
-    min-height: 600px;
+    max-width: 43%;
+    max-height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,8 +104,8 @@
 }
 
 .game{
-    width: 850px;
-    min-height: 650px;
+    max-width: 43%;
+    max-height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,11 +120,11 @@
 }
 
 .image {
-    width: 730px;
+    width: 88%;
 }
 
 .text {
-    width: 740px;
+    width: 88%;
 }
 
 .button {
@@ -140,7 +139,7 @@
 }
 
 .video{
-    width: 740px;
+    width: 88%;
 }
 
 .situation{
@@ -183,14 +182,14 @@ button {
     cursor: pointer;
     font-family: Open Sans;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 13px;
 
     background-color: var(--khaki);
     border: none;
     color: var(--black-olive);
     padding: 8px;
-    padding-right: 20%;
-    padding-left: 10px;
+    padding-right: 10%;
+    padding-left: 2%;
     margin: 4px;
     margin-bottom: 5px;
 
@@ -203,7 +202,8 @@ button:hover {
 }
 
 .button{
-  width: 880px;
+  max-width: 90%;
+  width: 100%;
 }
 
 .reset{
@@ -268,6 +268,29 @@ button:hover {
       100% { transform: translate(5%,0) }
   }
 
-  @media screen {
-    
+  @media screen and (max-width: 840px) {
+
+    .game-debut{
+      max-width: 90%;
+      max-height: 100%;
+    }
+
+    .game{
+      max-width: 90%;
+      max-height: 100%; 
+    }
+
+    h1{
+      font-size: 30px;
+    }
+
+    .button{
+      max-width: 60%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .bg{
+      display: none;
+    }
   }
