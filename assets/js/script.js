@@ -15,6 +15,8 @@ let div = document.querySelector(".button");
 let audioMute = document.querySelector("#checkbox-32");
 const myVolume = 0.1;
 
+localStorage.setItem("audioStorage", audioMute);
+
 let musiqueDebut = new Audio("assets/audio/debut.mp3");
 musiqueDebut.volume = myVolume;
 
@@ -54,6 +56,7 @@ audioMute.addEventListener("change", function () {
     musiqueSimone.volume = myVolume;
   }
 });
+
 
 //variables chapitre secret
 
