@@ -1,8 +1,6 @@
 //NOTE SUR LE TEXTE: Puisque le narrateur est un robot accompagnateur (Pod), à certains endroit le texte est FAIT EXPRÈS pour être inlisible, comme un glitch, une erreur, etc.
 //Ces parties ne sont pas des erreurs dans le code.
 
-//CE QUI RESTE À FAIRE: LocalStorage le mute, Git link, remise code + link
-
 //Variables html
 
 let titreChapter = document.querySelector("h2");
@@ -14,8 +12,6 @@ let maVideo = document.querySelector("#situationVideo");
 let div = document.querySelector(".button");
 let audioMute = document.querySelector("#checkbox-32");
 const myVolume = 0.1;
-
-//localStorage.setItem("audioStorage", audioMute);
 
 let musiqueDebut = new Audio("assets/audio/debut.mp3");
 musiqueDebut.volume = myVolume;
@@ -29,34 +25,37 @@ audioClique.volume = myVolume;
 let audioHover = new Audio("assets/audio/1890_button-click-62.mp3");
 audioHover.volume = myVolume;
 
-//DOM
+//Variables DOM
 let body = document.querySelector("body");
 let conteneurJeu = document.querySelector(".game");
-let situationJeu =  document.querySelector(".situation");
+let situationJeu = document.querySelector(".situation");
 let boutonStyle = document.querySelector(".button");
-let boutonResetStyle =  document.querySelector(".reset");
+let boutonResetStyle = document.querySelector(".reset");
 let p = document.querySelector("p");
 let h2 = document.querySelector("h2");
 let label = document.querySelector("label");
 let logo = document.querySelector("h1");
 
-//Checkbox volume
+//volume
+
+function setVolume(volume) {
+  audioClique.volume = volume;
+  audioHover.volume = volume;
+  musiqueDebut.volume = volume;
+  musiqueSimone.volume = volume;
+}
+
+//checkbox
 
 audioMute.addEventListener("change", function () {
-
   if (this.checked) {
-    audioClique.volume = 0;
-    audioHover.volume = 0;
-    musiqueDebut.volume = 0;
-    musiqueSimone.volume = 0;
+    setVolume(0);
+    localStorage.setItem("checkboxSave", true);
   } else {
-    audioClique.volume = myVolume;
-    audioHover.volume = myVolume;
-    musiqueDebut.volume = myVolume;
-    musiqueSimone.volume = myVolume;
+    setVolume(myVolume);
+    localStorage.setItem("checkboxSave", false);
   }
 });
-
 
 //variables chapitre secret
 
@@ -174,7 +173,6 @@ chapters = {
 };
 
 function goToChapter(chapter) {
-
   //local storage pour sauvegarder
   localStorage.setItem("currentChapter", chapter);
 
@@ -201,7 +199,6 @@ function goToChapter(chapter) {
     }
 
     if (myChapter == chapters.debut) {
-      //la musique start pas si on fait pas ctrl-s sur ce dossier dans vsCode ou si on retourne pas dans goToChapter("debut")
       musiqueSimone.pause();
       musiqueDebut.currentTime = 0;
       musiqueDebut.play();
@@ -220,13 +217,9 @@ function goToChapter(chapter) {
       h2.classList.add("titre-debut");
       label.classList.add("label-debut");
       logo.classList.add("hero");
-    }
-    else if (myChapter == chapters.simone) {
+    } else if (myChapter == chapters.simone) {
       musiqueDebut.pause();
-    }
-
-    else{
-
+    } else {
       //Remettre style pour tous les chapitres
       body.classList.remove("body-debut");
       conteneurJeu.classList.add("game");
@@ -240,7 +233,7 @@ function goToChapter(chapter) {
       h2.classList.remove("titre-debut");
       label.classList.remove("label-debut");
 
-      logo.classList.remove("hero")
+      logo.classList.remove("hero");
       logo.classList.add("hero-all");
     }
 
@@ -250,9 +243,6 @@ function goToChapter(chapter) {
         musiqueSimone.play();
       }
     }, 5000);
-
-    //If au dessus est pour le chapitre secret (plot twist). Si on prend le chemin des robots alors le bouton va changer pour la direction du chapitre secret.
-    //Else if est pour réinitialiser les boutons au choix initial quand on retourne au début, sans à avoir recharger la page.
 
     titreChapter.innerText = myChapter.titre;
     texteChapter.innerText = myChapter.description;
@@ -273,18 +263,21 @@ function goToChapter(chapter) {
       div.appendChild(createNewButton);
 
       //Changer style des boutons de début.
-      if(myChapter == chapters.debut){
+      if (myChapter == chapters.debut) {
         createNewButton.classList.add("button-debut");
-      }
-      else{
+      } else {
         createNewButton.classList.remove("button-debut");
       }
-
     });
   }
 }
 
 resetBtn.addEventListener("click", function () {
+  //uncheck le checkbox au reset
+  document.getElementById("checkbox-32").checked = false;
+  setVolume(myVolume);
+
+  //clear local storage
   localStorage.clear();
   goToChapter("debut");
 });
@@ -298,4 +291,11 @@ if (currentChapter !== null) {
   goToChapter(currentChapter);
 } else {
   goToChapter("debut");
+}
+
+//save checkbox
+
+if (localStorage.getItem("checkboxSave") == "true") {
+  setVolume(0);
+  document.getElementById("checkbox-32").checked = true;
 }
